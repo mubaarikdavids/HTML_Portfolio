@@ -20,6 +20,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.app-shell {
+  min-height: 100vh;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: var(--bg);
@@ -358,11 +362,10 @@ textarea {
     inset 0 0 50px rgba(255, 255, 255, 0.06);
 
   /* heres the background picture's code my sweet son */
-  background-image: url("mubak.png");
+  background-image: url("27C85F5B-E7EB-416B-96A7-9218B5AB8B1F.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
-  object-fit: cover;
+  background-size: cover;
 }
 
 
@@ -649,10 +652,20 @@ textarea {
 }
 
 .project-image {
+  display: block;
   height: 270px;
   background-size: cover;
   background-position: center;
   position: relative;
+  overflow: hidden;
+}
+
+.project-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 24%;
 }
 
 .project-image::after {
@@ -665,13 +678,23 @@ textarea {
 }
 
 .image-1 {
-  background:
-    linear-gradient(135deg, #0a0f15, #1b2b18, #b6ff00);
+  background: linear-gradient(135deg, #0a0f15, #1b2b18);
+}
+
+.image-1 img {
+  object-position: center 22%;
+}
+
+.image-1::after {
+  background: linear-gradient(to bottom, rgba(3, 5, 9, 0.02), rgba(3, 5, 9, 0.34));
 }
 
 .image-2 {
-  background:
-    linear-gradient(135deg, #061018, #093c48, #00f5ff);
+  background: linear-gradient(135deg, #061018, #093c48);
+}
+
+.image-2::after {
+  background: linear-gradient(to bottom, rgba(3, 5, 9, 0.04), rgba(3, 5, 9, 0.34));
 }
 
 .image-3 {
@@ -702,6 +725,11 @@ textarea {
   line-height: 1.7;
 }
 
+.project-content span a:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+
 /* CONTACT */
 
 .contact {
@@ -716,6 +744,17 @@ textarea {
   grid-template-columns: 0.9fr 1.1fr;
   gap: 42px;
   align-items: center;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.contact-links .btn {
+  width: auto;
 }
 
 .contact-card h2 {
